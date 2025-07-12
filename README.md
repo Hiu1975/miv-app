@@ -63,3 +63,10 @@ Obecna wersja to **MVP** – podstawowa funkcjonalność bez zaawansowanych opcj
 
 ## 📁 Struktura projektu
 
+```text
+miv-app/
+├── app_miv.py           # Główna aplikacja Streamlit
+├── requirements.txt     # Lista zależności
+├── README.md            # Ten plik
+├── LICENSE              # MIT License
+└── .gitignore           # Pliki/Foldery do ignorowania przez Git

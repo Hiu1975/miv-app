@@ -2,6 +2,8 @@
 # Basic version with core functionality (upload → model → results)
 # No advanced options or UI refinements yet
 
+# ver_1.08d
+
 import streamlit as st
 import pandas as pd
 from PIL import Image
@@ -80,7 +82,20 @@ def upload_data_from_user():
 
 # Function to configure model options and generate model
 def configure_model_options():
+    
     st.subheader("Model Configuration Options")
+
+    # Placeholder for future advanced options
+    model_conf_text = """
+    This is a placeholder for future model configurations.
+    Additional options like dropping columns, transforming features,
+    handling missing values, and other advanced settings will be
+    introduced in upcoming versions.
+    """
+
+    st.info(model_conf_text)
+
+    # TODO: Replace placeholder with configurations of model (v3.x)
 
     if "dataset" in st.session_state:
         dataset = st.session_state["dataset"]

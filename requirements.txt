@@ -1,0 +1,6 @@
+﻿streamlit>=1.25
+pandas>=1.5
+pycaret>=3.0
+pillow>=9.0
+python-dotenv>=1.0  # opcjonalnie dla przyszłej obsługi API key
+python_version >=3.9,<3.12

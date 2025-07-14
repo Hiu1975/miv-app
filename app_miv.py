@@ -2,7 +2,7 @@
 # Basic version with core functionality (upload → model → results)
 # No advanced options or UI refinements yet
 
-# ver_1.08d
+# ver_1.09
 
 import streamlit as st
 import pandas as pd
@@ -27,22 +27,22 @@ from pycaret.regression import (
 def detect_separator(uploaded_file, header_option):
     """Try common separators and choose the one producing most columns."""
     separators = [",", ";", "\t", "|"]
-    best_sep = ","
+    best_separator = ","
     max_cols = 0
 
-    for sep in separators:
+    for separator in separators:
         uploaded_file.seek(0)  # reset file pointer
         try:
-            df_test = pd.read_csv(uploaded_file, sep=sep, header=header_option, nrows=5)
+            df_test = pd.read_csv(uploaded_file, sep=separator, header=header_option, nrows=6)
             num_cols = df_test.shape[1]
             if num_cols > max_cols:
                 max_cols = num_cols
-                best_sep = sep
+                best_separator = separator
         except Exception:
             continue
 
     uploaded_file.seek(0)  # reset again for actual read
-    return best_sep
+    return best_separator
 
 
 # Function to upload data
